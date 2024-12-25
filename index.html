@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A platform for sharing heartfelt messages, romantic notes, or inspiring wishes. No account needed, it's user-friendly, just verify you're human! Yoh! Verse it, you know!">
+    <meta name="keywords" content="Verse, heartfelt messages, romantic notes, inspiring wishes, sharing platform, no account needed, user-friendly, verify human">
+    <meta name="author" content="Franklyn Akam">
+
+    <title>Verify to Enter Verse</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fontawesome-free-6.7.2-web/css/all.css">
+    <link rel="icon" href="favicon/verse logo (Copy) (1).png" type="image/png">
+    <link rel="icon" sizes="16x16" href="favicon/verse logo (Copy) (1).png">
+    <link rel="icon" sizes="32x32" href="favicon/verse logo (Copy) (1).png"> 
+    <link rel="icon" sizes="48x48" href="favicon/verse logo (Copy) (1).png">
+    <link rel="icon" sizes="64x64" href="favicon/verse logo (Copy) (1).png">
+    <link rel="icon" sizes="128x128" href="favicon/verse logo (Copy) (1).png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/verse logo (Copy) (1).png">
+
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div class="loading-screen" id="loader">
+        <i class="fa-solid fa-quote-right"></i>
+    </div>
+
+    <!-- Main section -->
+    <main id="main">
+        <div class="container">
+
+            <!-- Logo section -->
+            <div class="logo">
+                <span class="verse-logo-text">VERSE<i class="fa-solid fa-quote-right"></i></span>
+            </div>
+    
+            <!-- Welcome message -->
+            <h1>Welcome to Verse!</h1>
+            <p>Hold on, you're almost there! Please verify you're human to join the Verse community.</p>
+    
+            <!-- Cloudflare box -->
+            <div class="cloudflare-box">
+                <div>
+                    <input type="checkbox" id="human-check"> <span>I am not a robot</span> 
+                </div>
+            </div>
+    
+            <!-- Small note -->
+            <p class="note">We ask for this quick check to ensure a bot-free experience for all Verse users.</p>
+        </div>
+    </main>
+    
+ 
+        <!-- Internal JS functionality -->
+        <script>
+            // Show the loader, then display the page content
+            window.addEventListener("load", () => {
+                const loader = document.getElementById("loader");
+                const mainContent = document.getElementById("main");
+    
+                // Simulate loading time
+                setTimeout(() => {
+                    loader.style.display = "none";
+                    mainContent.style.display = "block";
+                }, 5000); // 5 secs delay
+            });
+    
+            // Show the loader on link clicks
+            function showLoader() {
+                const loader = document.getElementById("loader");
+                const mainContent = document.getElementById("main");
+    
+                loader.style.display = "flex";
+                mainContent.style.display = "none";
+            }
+        </script>
+
+
+    <!-- External JS functionality -->
+    <script src="index.js"></script>
+
+
+</body>
+</html>
+

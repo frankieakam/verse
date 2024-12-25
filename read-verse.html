@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Verse is a user-friendly platform to share creative verses, heartfelt messages, romantic notes, and inspiring wishes. Join a community of positivity without needing an account—just verify you're human and start sharing! Yoh! Verse it, you know!">
+
+    <meta name="keywords" content="Verse, creative verses, heartfelt messages, romantic notes, inspiring wishes, sharing platform, no account needed, user-friendly, community, positivity, verify human">
+    
+    <meta name="author" content="Franklyn Akam">
+
+    <title>Read Verses - Verse</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fontawesome-free-6.7.2-web/css/all.css">
+    <link rel="icon" href="favicon/verse logo (Copy) (1).png" type="image/png">
+    <link rel="icon" sizes="16x16" href="favicon/verse logo (Copy) (1).png">
+    <link rel="icon" sizes="32x32" href="favicon/verse logo (Copy) (1).png"> 
+    <link rel="icon" sizes="48x48" href="favicon/verse logo (Copy) (1).png">
+    <link rel="icon" sizes="64x64" href="favicon/verse logo (Copy) (1).png">
+    <link rel="icon" sizes="128x128" href="favicon/verse logo (Copy) (1).png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/verse logo (Copy) (1).png">
+
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div class="loading-screen" id="loader">
+        <i class="fa-solid fa-quote-right"></i>
+    </div>
+
+    <!-- Header section -->
+    <header id="header">
+        <div class="verse-logo">
+            <!-- <a href="about.html"><img src="images/VERSE transparent logo white.png" alt="Verse Logo"></a>  -->
+            <a href="about.html"><span class="verse-logo-top-text">VERSE<i class="fa-solid fa-quote-right"></i></span></a> 
+        </div>
+
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li><a href="goto.html">Go To <i class="fa-solid fa-shuttle-space"></i></a></li>
+                    <li><a href="verse.html">Start To Verse! </i> <i class="fa-solid fa-quote-right"></i></a></li>
+                    <li><a href="topics.html">Topics <i class="fa-solid fa-layer-group"></i> </a></li>
+                    <li><a href="tags.html">Tags <i class="fa-solid fa-tags"></i> </a></li>
+                    <li><a href="subscribe.html">Subscribe</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+
+     <!-- Main section -->
+    <main id="main">
+        
+        <!-- Read verse container for displaying shared verses -->
+        <div class="read-verse-container" id="read-verse-container">
+            <!-- Verses will be dynamically inserted here -->
+        </div>
+        
+        <!-- Read verse 'rv' pop up overlay -->
+        <div class="rv-popup-overlay" id="rv-popup">
+            <div class="rv-popup-content">
+                <button class="rv-close-btn" onclick="closePopup()">×</button>
+                <div class="rv-marquee-container">
+                    <div class="rv-marquee-text">
+                        Hey, Verser! The decision is yours—close this window to either read verses or start your own verse
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+    </main>
+    
+
+    <!-- Internal JS functionality -->
+    <script>
+        // Show the loader, then display the page content
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("loader");
+            const mainContent = document.getElementById("main");
+
+            // Simulate loading time
+            setTimeout(() => {
+                loader.style.display = "none";
+                mainContent.style.display = "block";
+            }, 5000); // 5 secs delay
+        });
+
+        // Show the loader on link clicks
+        function showLoader() {
+            const loader = document.getElementById("loader");
+            const mainContent = document.getElementById("main");
+
+            loader.style.display = "flex";
+            mainContent.style.display = "none";
+        };
+    </script>
+
+
+    <!-- External JS functionality -->
+    <script src="read-verse.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Verse is a user-friendly platform to share creative verses, heartfelt messages, romantic notes, and inspiring wishes. Join a community of positivity without needing an account—just verify you're human and start sharing! Yoh! Verse it, you know!">
+
+    <meta name="keywords" content="Verse, creative verses, heartfelt messages, romantic notes, inspiring wishes, sharing platform, no account needed, user-friendly, community, positivity, verify human">
+    
+    <meta name="author" content="Franklyn Akam">
+
+    <title>About - Verse</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="fontawesome-free-6.7.2-web/css/all.css">
+    <link rel="icon" href="favicon/verse logo (Copy) (1).png" type="image/png">
+    <link rel="icon" sizes="16x16" href="favicon/verse logo (Copy) (1).png">
+    <link rel="icon" sizes="32x32" href="favicon/verse logo (Copy) (1).png"> 
+    <link rel="icon" sizes="48x48" href="favicon/verse logo (Copy) (1).png">
+    <link rel="icon" sizes="64x64" href="favicon/verse logo (Copy) (1).png">
+    <link rel="icon" sizes="128x128" href="favicon/verse logo (Copy) (1).png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/verse logo (Copy) (1).png">
+
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div class="loading-screen" id="loader">
+        <i class="fa-solid fa-quote-right"></i>
+    </div>
+
+    <!-- Header section -->
+    <header id="header">
+        <div class="verse-logo">
+            <!-- <a href="about.html"><img src="images/VERSE transparent logo white.png" alt="Verse Logo"></a>  -->
+            <a href="about.html"><span class="verse-logo-top-text">VERSE<i class="fa-solid fa-quote-right"></i></span></a> 
+        </div>
+
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li><a href="goto.html">Go To <i class="fa-solid fa-shuttle-space"></i></a></li>
+                    <li><a href="read-verse.html">Read Verse! </i> <i class="fa-solid fa-quote-right"></i></a></li>
+                    <li><a href="topics.html">Topics <i class="fa-solid fa-layer-group"></i> </a></li>
+                    <li><a href="tags.html">Tags <i class="fa-solid fa-tags"></i> </a></li>
+                    <li><a href="subscribe.html">Subscribe</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+
+    <!-- Main section -->
+    <main class="goto-container">
+        
+        <!-- Go To Pop up Overlay -->
+        <div class="goto-popup-overlay" id="goto-popup">
+            <div class="goto-popup-content">
+                <button class="goto-close-btn" onclick="closePopup()">×</button>
+                <div class="goto-marquee-container">
+                    <div class="goto-marquee-text">
+                        Close this window to experience the verse world
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Go To -->
+        <div class="goto-card">
+            <h2>Verse of the Day</h2>
+            <p>A verse a day keeps the worries away</p>
+            <i class="fa-solid fa-quote-left"></i> <i class="fa-solid fa-quote-right"></i>
+            <p>Some persons will never like you because your spirit irritates their demons</p>
+            <footer>— Denzel Washington</footer>
+        </div>
+
+        <div class="goto-card">
+            <h2>Yesterday's Words</h2>
+            <p>Yesterday's wisdom fuels today's growth</p>
+            <i class="fa-solid fa-quote-left"></i> <i class="fa-solid fa-quote-right"></i>
+            <p>If you can't fly, then run. If you can't run, then walk. If you can't walk, then crawl, but by all means, keep moving</p>
+            <footer>— Martin Luther King Jr.</footer>
+        </div>
+
+        <div class="goto-card">
+            <h2>Featured Verser</h2>
+            <p>Recognizing the verser who inspired the community</p>
+            <i class="fa-solid fa-quote-left"></i> <i class="fa-solid fa-quote-right"></i>
+            <p>May your code be bug-free, your coffee or tea mug be full and your loops always end in the right condition</p>
+            <footer>— Franklyn Akam</footer>
+        </div>
+
+        <div class="goto-card">
+            <h2>Versers' Choice</h2>
+            <p>A pick of the community's favorite verse</p>
+            <i class="fa-solid fa-quote-left"></i> <i class="fa-solid fa-quote-right"></i>
+            <p>Did you know a smile can heal? In every moment, come what may, remember this - You're amazing when you smile</p>
+            <footer>— Etima Paul</footer>
+        </div>
+
+        <div class="goto-card">
+            <h2>Trending Topics</h2>
+            <p>Explore the most talked-about verses today</p>
+            <i class="fa-solid fa-quote-left"></i> <i class="fa-solid fa-quote-right"></i>
+            <p>If Donald Trump wins, we do have an opportunity to do kind of a once in a lifetime deregulation and reduction in the size of the government</p>
+            <footer>— Elon Musk</footer>
+        </div>
+<!-- 
+        <div class="goto-hero"> -->
+
+            <!-- Go to verse socials -->
+            <div class="goto-socials">
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            </div>
+               
+            <!-- Go to footer -->
+            <ul class="goto-footer">
+                <li><a href="about.html">About</a></li>
+                <li><a href="terms-of-use.html">Terms of Use</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+        <!-- </div> -->
+
+    </main>
+
+
+    <!-- Internal JS functionality -->
+    <script>
+        // Show the loader, then display the page content
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("loader");
+            const mainContent = document.getElementById("main");
+
+            // Simulate loading time
+            setTimeout(() => {
+                loader.style.display = "none";
+                mainContent.style.display = "block";
+            }, 5000); // 5 secs delay
+        });
+
+        // Show the loader on link clicks
+        function showLoader() {
+            const loader = document.getElementById("loader");
+            const mainContent = document.getElementById("main");
+
+            loader.style.display = "flex";
+            mainContent.style.display = "none";
+        };
+    </script>
+
+
+    <!-- External JS functionality -->
+    <script src="goto.js"></script>
+
+
+</body>
+</html>

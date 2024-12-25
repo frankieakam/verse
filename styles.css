@@ -1,0 +1,1887 @@
+@import url('https://fonts.googleapis.com/css2?family=Atomic+Age&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+
+
+/* GENERAL RESET STYLING */
+
+/* BODY STYLING */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #89fffd, #ef32d990);
+    background-attachment: fixed;
+    font-family: "Raleway", sans-serif;
+    color: #333;
+}
+
+
+/* HEADER STYLING */
+#header {
+    background-color: #333; 
+    color: #fff;
+    padding: 10px 20px; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+}
+
+/* Logo styling */
+.verse-logo-text {
+    font-family: "Atomic Age", system-ui;
+    font-size: 50px;
+    font-weight: 900;
+    color: #333;
+    /* font-family: "Montserrat Alternates", sans-serif;
+    background:linear-gradient(135deg, #89fffd, #ef32d990, #333) ;
+    background-clip: text;
+    color: transparent; */
+}
+
+.verse-logo-text i {
+    color: #89fffd;
+    animation: blink 1s infinite;
+}
+
+.verse-logo-top-text {
+    font-family: "Atomic Age", system-ui;
+    font-size: 24px;
+    font-weight: 900;
+    color: #fff;
+    padding-left: 25px; 
+    /* font-family: "Montserrat Alternates", sans-serif;
+    background:linear-gradient(135deg, #89fffd, #ef32d990, #333);
+    background-clip: text;
+    color: transparent; */
+}
+
+a .verse-logo-top-text i {
+    transition: color 0.3s ease; /* Smooth color transition for the quote */
+    color: inherit; /* Inherits the text color */
+    animation: blink 1s infinite;
+}
+
+a:hover .verse-logo-top-text i {
+    color: #89fffd; /* Changes color of the quote on hover */
+}
+
+.verse-logo a {
+    text-decoration: none;
+}
+
+/* VERSE logo blinking animation */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Nav styling */
+.nav {
+    display: flex; 
+}
+
+nav ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0 40px;
+    display: flex;
+    font-weight: bold;
+}
+
+nav ul li {
+    margin-right: 20px; 
+    position: relative; 
+    color: #fff;
+}
+
+nav ul li a {
+    text-decoration: none; 
+    color: #fff;  
+    transition: color 0.3s; 
+}
+
+nav ul li a:hover {
+    text-decoration: underline #89fffd 4px solid;
+}
+
+nav ul li i {
+    margin-left: 1px;
+}
+
+nav ul li i {
+    color: #89fffd;
+}
+
+/* Go To styling */
+
+/* Go To Container */
+.goto-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;
+    flex-wrap: wrap; /* Ensures it wraps on smaller screens */
+    margin: 15px auto 0 auto;
+    max-width: 1200px;
+    border-bottom: 1px solid #333;
+}
+
+/* Go To popup overlay styles */
+.goto-popup-overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Go To popup content styles */
+.goto-popup-content {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #ef32d990, #89fffd) 1;
+    background-color: #fff;
+    padding: 10px 30px;
+    width: 400px;
+    position: relative; 
+    text-align: center;
+}
+
+.goto-popup-content:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #333,  #ef32d990, #333) 1;
+}
+
+/* Go To close button */
+.goto-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: red;
+    border: none;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+/* Go To marquee container */
+.goto-marquee-container {
+    overflow: hidden; /* Hide content outside the container */
+    white-space: nowrap; /* Prevent text from wrapping */
+    width: 100%; /* Full width */
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+/* Go To marquee text */
+.goto-marquee-text {
+    display: inline-block;
+    animation: scroll-left 10s linear infinite; /* Smooth scrolling animation */
+    color: #333;
+    font-weight: bold;
+}
+
+/* Keyframes for go to marquee effect */
+@keyframes scroll-left {
+    from {
+        transform: translateX(50%); /* Start from the right */
+    }
+    to {
+        transform: translateX(-70%); /* Move to the left */
+    }
+}
+
+/* Go To Card */
+.goto-card {
+    background: #fff;
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #ef32d990, #89fffd) 1;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.goto-card:hover {
+    border-image: linear-gradient(135deg, #333,  #ef32d990, #333) 1;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Icons in Go To Card */
+.goto-card i {
+    font-size: 20px;
+    color: #89fffd;
+    margin-bottom: 15px;
+}
+
+/* Go To Card Title */
+.goto-card h2 {
+    font-size: 12px;
+    font-weight: 900;
+    color: #333;
+    margin: 5px 0 10px;
+}
+
+/* Go To Card Description */
+.goto-card p {
+    font-size: 10px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Go To Card Footer */
+.goto-card footer {
+    text-align: right;
+    color: #333;
+    padding: 5px 20px;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* .goto-hero {
+    display: flex; Flexbox for horizontal alignment
+    justify-content: center; Centers everything horizontally
+    align-items: center; Aligns items vertically in the center
+    gap: 20px; Adds spacing between the social icons and footer links
+    flex-wrap: wrap; Ensures it wraps on smaller screens
+} */
+
+.goto-socials {
+    flex: 1;
+    text-align: center;
+    padding-right: 135px;
+    margin-top: 80px;
+}
+
+.goto-socials a {
+    font-size: 24px;
+    color: #333;
+    margin-right: 10px
+}
+
+.goto-socials a:last-child {
+    margin-right: 0; /* Removes margin for the last icon */
+}
+
+.goto-socials a:hover {
+    color: #89fffd;
+}
+
+.goto-footer {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 89px;
+}
+
+.goto-footer li {
+    margin-right: 15px; /* Adds spacing between links */
+}
+
+.goto-footer li:last-child {
+    margin-right: 0; /* Removes margin for the last item */
+}
+
+.goto-footer a {
+    color: #333;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.goto-footer a:hover {
+    text-decoration: underline #89fffd 4px solid;
+} 
+
+/* Topics styling */
+
+/* Topics Container */
+.topics-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 35px auto 0 auto;
+    padding: 0 10px;
+    max-width: 1200px;
+}
+
+/* Topics popup overlay styles */
+.topics-popup-overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Topics popup content styles */
+.topics-popup-content {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #ef32d990, #89fffd) 1;
+    background-color: #fff;
+    padding: 10px 30px;
+    width: 400px;
+    position: relative; 
+    text-align: center;
+}
+
+.topics-popup-content:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #333,  #ef32d990, #333) 1;
+}
+
+/* Topics close button */
+.topics-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: red;
+    border: none;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+/* Topics marquee container */
+.topics-marquee-container {
+    overflow: hidden; /* Hide content outside the container */
+    white-space: nowrap; /* Prevent text from wrapping */
+    width: 100%; /* Full width */
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+/* Topics marquee text */
+.topics-marquee-text {
+    display: inline-block;
+    animation: scroll-left 10s linear infinite; /* Smooth scrolling animation */
+    color: #333;
+    font-weight: bold;
+}
+
+/* Keyframes for topics marquee effect */
+@keyframes scroll-left {
+    from {
+        transform: translateX(50%); /* Start from the right */
+    }
+    to {
+        transform: translateX(-70%); /* Move to the left */
+    }
+}
+
+
+/* Topic Card */
+.topic-card {
+    background: #fff;
+    /* border-radius: 15px; */
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #ef32d990, #89fffd) 1;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topic-card:hover {
+    border-image: linear-gradient(135deg, #333,  #ef32d990, #333) 1;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Icons in Topic Card */
+.topic-card i {
+    font-size: 40px;
+    color: #89fffd;
+    margin-bottom: 15px;
+}
+
+/* Topic Title */
+.topic-card h2 {
+    font-size: 20px;
+    font-weight: 900;
+    color: #333;
+    margin: 5px 0 10px;
+}
+
+/* Topic Description */
+.topic-card p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* Explore Button */
+.topic-card a {
+    display: inline-block;
+    color: #fff;
+    background-color: #333;
+    padding: 5px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.topic-card a:hover {
+    color: #89fffd;
+}
+
+/* .topic-card .fa {
+    font-size: 12px;
+} */
+
+/* Topic footer */
+/* #topic-footer {
+    width: 100%;
+    position: absolute;
+    top: 750px;
+    bottom: 500px; */
+
+    /* background-color: #fff; */
+
+/* } */
+
+/* .topic-footer-container {
+    padding: 10px 20px; */
+
+    /* background-color: #fff; */ 
+
+/* } */
+
+/* .topic-footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px; 
+} */
+
+
+/* Tags styling */
+
+/* Tags container */
+.tags-container {
+    max-width: 1200px;
+    /* margin: 110px auto 0 auto; */
+    margin: 32px auto;
+    padding: 60px 16px;
+    text-align: center;
+}
+
+/* Tags popup overlay styles */
+.tags-popup-overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tags popup content styles */
+.tags-popup-content {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #ef32d990, #89fffd) 1;
+    background-color: #fff;
+    padding: 10px 30px;
+    width: 400px;
+    position: relative; 
+    text-align: center;
+}
+
+.tags-popup-content:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #333,  #ef32d990, #333) 1;
+}
+
+/* Tags close button */
+.tags-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: red;
+    border: none;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+/* Tags marquee container */
+.tags-marquee-container {
+    overflow: hidden; /* Hide content outside the container */
+    white-space: nowrap; /* Prevent text from wrapping */
+    width: 100%; /* Full width */
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+/* Tags marquee text */
+.tags-marquee-text {
+    display: inline-block;
+    animation: scroll-left 10s linear infinite; /* Smooth scrolling animation */
+    color: #333;
+    font-weight: bold;
+}
+
+/* Keyframes for tags marquee effect */
+@keyframes scroll-left {
+    from {
+        transform: translateX(50%); /* Start from the right */
+    }
+    to {
+        transform: translateX(-70%); /* Move to the left */
+    }
+}
+
+/* .tags-container h1 {
+    font-size: 25px;
+    color: #333;
+    margin: 60px auto 20px auto;
+} */
+
+/* Tags grid */
+.tags-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 25px;
+}
+
+.tags-grid a {
+    text-decoration: none;
+}
+
+/* Tags card */
+.tags-card {
+    background-color: #fff;
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #ef32d990, #89fffd) 1;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.tags-card:hover {
+    border-image: linear-gradient(135deg, #333,  #ef32d990, #333) 1;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    /* transform: translateY(-5px); */
+}
+
+.tags-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 5px solid #333;
+}
+
+.tags-card figcaption {
+    font-size: 10px;
+    font-style: italic;
+    text-align: center;
+    color: #777;
+    /* border-bottom: 2px solid #333; */
+    padding-right: 5px;
+}
+
+.tags-card footer {
+    margin: 17px 0;
+    font-size: 12px;
+    color: #333;
+    font-weight: bold;
+}
+
+.tags-card p {
+    font-size: 10px;
+    color: #333;
+}
+
+/* Tags footer */
+/* #tags-footer {
+    width: 100%;
+    position: absolute;
+    top: 850px;
+    bottom: 500px; */
+
+    /* background-color: #fff; */
+
+/* } */
+
+/* .tags-footer-container {
+    padding: 10px 20px; */
+
+    /* background-color: #fff; */  
+
+/* } */
+
+/* .tags-footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px; 
+} */
+
+
+/* Subscription form styling */
+
+/* Subscription popup overlay styles */
+.subscribe-popup-overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Subscribe popup content styles */
+.subscribe-popup-content {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #ef32d990, #89fffd) 1;
+    background-color: #fff;
+    padding: 10px 30px;
+    margin-left: 48px;
+    width: 400px;
+    position: relative; 
+    text-align: center;
+}
+
+.subscribe-popup-content:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #333,  #ef32d990, #333) 1;
+}
+
+/* Subscribe close button */
+.subscribe-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: red;
+    border: none;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+/* Subscribe marquee container */
+.subscribe-marquee-container {
+    overflow: hidden; /* Hide content outside the container */
+    white-space: nowrap; /* Prevent text from wrapping */
+    width: 100%; /* Full width */
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+/* Subscribe marquee text */
+.subscribe-marquee-text {
+    display: inline-block;
+    animation: scroll-left 10s linear infinite; /* Smooth scrolling animation */
+    color: #333;
+    font-weight: bold;
+}
+
+/* Keyframes for subscribe marquee effect */
+@keyframes scroll-left {
+    from {
+        transform: translateX(50%); /* Start from the right */
+    }
+    to {
+        transform: translateX(-70%); /* Move to the left */
+    }
+}
+
+.subscription-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #ef32d990, #89fffd) 1;
+    /* border-radius: 15px; */
+}
+
+.subscription-form:hover {
+    border-image: linear-gradient(135deg, #333,  #ef32d990, #333) 1;
+}
+
+.subscription-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.subscription-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 16px;
+}
+
+.subscription-form input[type="text"],
+.subscription-form input[type="email"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.subscription-form button {
+    width: 102%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.subscription-form button:hover {
+    color: #89fffd;
+}
+
+
+/* MAIN STYLING */
+#main {
+    display: flex;
+    background-attachment: fixed;
+}
+
+.main-container {
+    margin: 200px 
+}
+
+/* Sidebar styling */
+/* .sidebar {
+    width: 20%;
+    border-bottom-right-radius: 8px;
+    padding: 10px 20px;
+    margin: 52px 0 260px 0;
+    position:sticky;
+}
+
+.sidebar-top li {
+    text-decoration: underline #89fffd 4px solid;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    text-align: left;
+    color: #fff;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.sidebar p {
+    color: #fff;
+    text-align: left;
+    font-size: 10px;
+}
+
+.sidebar-socials {
+    flex: 1;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.sidebar-socials a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 40px;
+}
+
+.sidebar-socials a:hover {
+    color:#89fffd;
+} 
+
+.sidebar-footer {
+    margin: 10px auto;
+    font-size: 10px;
+
+}
+
+.sidebar-footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sidebar-footer li:hover {
+    text-decoration: underline #89fffd 4px solid;
+} 
+
+.blockquote {
+    background-color: #ffff; 
+    padding: 10px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+.blockquote p {
+    font-size: 10px;
+    font-style: italic;
+    margin: 0;
+    color: #333;
+}
+
+.blockquote footer {
+    text-align: left;
+    font-size: 8px;
+    font-weight: bold;
+    margin-top: 5px;
+} */
+
+
+/* ad sidebar styling */
+/* .ad-sidebar {
+    width: 20%;
+    background-color: #333;
+    border-bottom-left-radius: 8px;
+    padding: 10px 20px;
+    margin: 52px 0 730px 0;
+}
+
+.ad-sidebar-top li {
+    text-decoration: underline #89fffd 4px solid;
+    
+}
+
+.ad-sidebar ul {
+    list-style-type: none;
+}
+
+.ad-sidebar ul li {
+    text-align: right;
+    color: #333;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.ad-sidebar p {
+    color: #fff;
+    text-align: right;
+    font-size: 10px;
+}
+
+.ad-sidebar-footer {
+    margin: 10px auto;
+    font-size: 10px;
+}
+
+.ad-sidebar-footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.ad-sidebar-footer li:hover {
+    text-decoration: underline #89fffd 4px solid;
+} 
+
+.ad-blockquote {
+    background-color: #ffff; 
+    padding: 10px;
+    border: #89fffd 4px solid;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+.ad-blockquote p {
+    font-size: 10px;
+    font-style: italic;
+    margin: 0;
+    color: #333;
+}
+
+.ad-blockquote a {
+    text-decoration: none;
+}
+
+.ad-blockquote button {
+    font-size: 8px;
+    border-radius: 8px;
+    margin: 5px 0 0 100px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+} */
+
+
+/* Subscribe and Contact main form styling */
+.main-form {
+    margin: 50px;
+}
+
+/* Main container */
+.container {
+    text-align: center;
+    background-color: #fff;  /* rgba(0, 0, 0, 0.7); */
+    padding: 20px;
+    margin: 20px 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #ef32d990, #89fffd) 1;
+    /* border-radius: 15px; */
+}
+
+.container:hover {
+    border-image: linear-gradient(135deg, #333,  #ef32d990, #333) 1;
+}
+
+.container-section {
+    margin: 50px;   
+}
+
+/* Heading and text */
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+p {
+    /* text-align: center; */
+    margin-bottom: 20px;
+}
+
+/* Cloudflare box styling */
+.cloudflare-box {
+    background: #333; /*#333; */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.cloudflare-box span {
+    font-size: 17px;
+    color: #fff;
+}
+
+/* Small note text */
+.note {
+    margin-top: 20px;
+    font-size: 15px;
+    color: #333;
+}
+
+.note a {
+    text-decoration: none;
+    color: #333;
+    font-size: 19px;
+}
+
+.note a:hover {
+    text-decoration: underline #89fffd 4px solid;
+}
+
+/* Terms styling and Privacy styling */
+.main-container h1 {
+    font-size: 40px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.main-container h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 30px;
+    text-decoration: underline;
+}
+
+/* Paragraph and list styling */
+.main-container p, .main-container ul {
+    font-size: 16px;
+}
+
+.p-bold {
+    font-weight: bold;
+}
+
+.main-container ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    list-style: none;
+}
+
+/* Bold text */
+strong {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Container for content */
+.main-container {
+    text-align: justify;
+    background-color: #fff;  /* rgba(0, 0, 0, 0.7); */
+    padding: 50px;
+    margin: 117px 100px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #ef32d990, #89fffd) 1;
+    /* border-radius: 15px; */
+}
+
+.main-container:hover {
+    border-image: linear-gradient(135deg, #333,  #ef32d990, #333) 1;
+}
+
+.main-container a {
+    text-decoration: none;
+    color: #333;
+}
+
+.main-container a:hover {
+    text-decoration: underline #89fffd 4px solid;
+}
+
+
+/* Contact form styling */
+
+/* Contact form popup overlay styles */
+.contact-popup-overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contact popup content styles */
+.contact-popup-content {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #ef32d990, #89fffd) 1;
+    background-color: #fff;
+    padding: 10px 30px;
+    margin-left: 56px;
+    width: 400px;
+    position: relative; 
+    text-align: center;
+}
+
+.contact-popup-content:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #333,  #ef32d990, #333) 1;
+}
+
+/* Contact form close button */
+.contact-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: red;
+    border: none;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+/* Contact form marquee container */
+.contact-marquee-container {
+    overflow: hidden; /* Hide content outside the container */
+    white-space: nowrap; /* Prevent text from wrapping */
+    width: 100%; /* Full width */
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+/* Contact form marquee text */
+.contact-marquee-text {
+    display: inline-block;
+    animation: scroll-left 10s linear infinite; /* Smooth scrolling animation */
+    color: #333;
+    font-weight: bold;
+}
+
+/* Keyframes for contact form marquee effect */
+@keyframes scroll-left {
+    from {
+        transform: translateX(50%); /* Start from the right */
+    }
+    to {
+        transform: translateX(-70%); /* Move to the left */
+    }
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 65px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #ef32d990, #89fffd) 1;
+    /* border-radius: 15px; */
+}
+
+.contact-form:hover {
+    border-image: linear-gradient(135deg, #333,  #ef32d990, #333) 1;
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 16px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form button {
+    width: 102%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    color: #89fffd;
+}
+
+
+/* Read verse styling */
+
+/* Read verse popup overlay styles */
+.rv-popup-overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Read verse popup content styles */
+.rv-popup-content {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #ef32d990, #89fffd) 1;
+    background-color: #fff;
+    padding: 10px 30px;
+    width: 400px;
+    position: relative; 
+    text-align: center;
+}
+
+.rv-popup-content:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #333,  #ef32d990, #333) 1;
+}
+
+/* Read verse close button */
+.rv-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: red;
+    border: none;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+/* Read verse marquee container */
+.rv-marquee-container {
+    overflow: hidden; /* Hide content outside the container */
+    white-space: nowrap; /* Prevent text from wrapping */
+    width: 100%; /* Full width */
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+/* Read verse marquee text */
+.rv-marquee-text {
+    display: inline-block;
+    animation: scroll-left 10s linear infinite; /* Smooth scrolling animation */
+    color: #333;
+    font-weight: bold;
+}
+
+/* Keyframes for read verse marquee effect */
+@keyframes scroll-left {
+    from {
+        transform: translateX(50%); /* Start from the right */
+    }
+    to {
+        transform: translateX(-70%); /* Move to the left */
+    }
+}
+
+/*  Read verse emoji interaction buttons styling */
+.emoji-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+}
+
+.emoji-buttons button {
+    background-color: #89fffd;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s;
+}
+
+.emoji-buttons button:hover {
+    transform: scale(1.2);
+}
+
+.emoji-buttons button:focus {
+    outline: none;
+}
+
+
+/* Share your verse styling */
+.verse-container {
+    width: 100%;
+    position:relative;
+}
+
+/* Share your verse 'syv' popup overlay styles */
+.syv-popup-overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Share your verse 'syv' popup content styles */
+.syv-popup-content {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #ef32d990, #89fffd) 1;
+    background-color: #fff;
+    padding: 10px 30px;
+    width: 400px;
+    position: relative; 
+    text-align: center;
+}
+
+.syv-popup-content:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #333,  #ef32d990, #333) 1;
+}
+
+/* Share your verse 'syv' close button */
+.syv-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: red;
+    border: none;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+/* Share your verse 'syv' marquee container */
+.syv-marquee-container {
+    overflow: hidden; /* Hide content outside the container */
+    white-space: nowrap; /* Prevent text from wrapping */
+    width: 100%; /* Full width */
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+/* Share your verse 'syv' marquee text */
+.syv-marquee-text {
+    display: inline-block;
+    animation: scroll-left 10s linear infinite; /* Smooth scrolling animation */
+    color: #333;
+    font-weight: bold;
+}
+
+/* Keyframes for Share your verse 'syv' marquee effect */
+@keyframes scroll-left {
+    from {
+        transform: translateX(50%); /* Start from the right */
+    }
+    to {
+        transform: translateX(-70%); /* Move to the left */
+    }
+}
+
+
+.verse-box {
+    background-color: #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #ef32d990, #89fffd) 1;
+    padding: 0 100px;
+    margin: 55px 150px auto 150px;
+    text-align: center;
+}
+
+.verse-box:hover {
+    border-image: linear-gradient(135deg, #333,  #ef32d990, #333) 1;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#username-input {
+    width: 69.5%;
+    padding: 10px 50px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.fa-user {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #333;
+    font-weight: 900;
+}
+
+.textarea-wrapper {
+    position: relative;
+}
+
+#verse-input {
+    width: 96%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    min-height: 80px;
+    resize: none;
+}
+
+#char-counter {
+    position: absolute;
+    right: 10px;
+    bottom: -15px;
+    font-size: 14px;
+    color: #333;
+}
+
+#post-verse-btn {
+    width: 40%;
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px auto;
+    transition: background-color 0.3s;
+}
+
+#post-verse-btn:hover {
+    color: #89fffd;
+}
+
+.verse-display h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Profile photo upload wrapper styling for share your verse */
+.photo-upload-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.user-photo-label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.user-upload-box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #333;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.user-upload-box:hover {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+/* Hide default file input styling for share your verse */
+input[type="file"] {
+    display: none;
+}
+
+/* Preview uploaded photo styling for share your verse */
+#photo-preview {
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    display: none;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Display shared verses on read verse styling */
+#read-verse-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 100px 20px;
+}
+
+.read-verse-box {
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #ef32d990, #89fffd) 1;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    max-width: 200px;
+    padding: 10px 10px;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;   
+    /* padding: 15px; */
+}
+
+.read-verse-box:hover {
+    border-image: linear-gradient(135deg, #333,  #ef32d990, #333) 1;
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Added user photo preview styling for read verse box */
+.user-photo-preview {
+    width: 50px;
+    height: 50px;
+    /* padding-right: 50px; */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Added quote icons styling for read verse box */
+.read-verse-box i {
+    color: #89fffd;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+/* Added verse text styling for read verse box */
+.read-verse-box p {
+    font-size: 10px;
+    color: #333;
+    font-style: italic;
+    margin: 15px 0;
+}
+
+/* Added username footer styling for read verse box */
+.read-verse-box footer {
+    font-size: 10px;
+    color: #333;
+    /* color: #777; */
+    font-weight: 700;
+    text-align: right;
+}
+
+
+/* input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px auto 10px;
+    border: 1px solid #536493;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    width: calc(100% - 50%);
+    padding: 10px;
+    margin: 10px auto 10px;
+    border: 1px solid #536493;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #536493;
+    color: #fff;
+    padding: 10px;
+    margin: 10px auto 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: calc(100% - 20px);
+}
+
+button[type="submit"]:hover {
+    background-color: #000;
+} */
+
+
+/* FOOTER STYLING */
+#footer {
+    /* background-color: #fff; */
+    width: 100%;
+    position: absolute;
+    top: 1500px;
+    bottom: 500px;
+}
+
+.footer-container {
+    padding: 20px 20px;
+    /* background-color: #fff; */
+}
+
+/* Top section: Flexbox for logo, socials, and newsletter */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.verse-logo-bottom-text {
+    font-family: "Atomic Age", system-ui;
+    font-size: 24px;
+    font-weight: 900;
+    color: #333;
+    padding-left: 25px;
+    /* font-family: "Montserrat Alternates", sans-serif;
+    background:linear-gradient(135deg, #89fffd, #ef32d990, #333);
+    background-clip: text;
+    color: transparent; */
+}
+
+.verse-logo-bottom-text i {
+    animation: blink 1s infinite;
+}
+
+.verse-logo p {
+    color: #333;
+    font-size: 16px;
+    margin: 0;
+    padding-left: 25px;
+}
+
+.verse-socials {
+    flex: 1;
+    text-align: center;
+    padding-left: 55px;
+}
+
+.verse-socials a {
+    margin: 0 10px;
+    font-size: 40px;
+    color: #333;
+}
+
+.verse-socials a:hover {
+    color: #89fffd;
+}
+
+.newsletter-form {
+    flex: 1;
+    text-align: right;
+    color: #333;
+}
+
+.consent-checkbox {
+    padding-right: 25px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-right: 25px;
+}
+
+.input-group input[type="email"] {
+    padding: 10px;
+    width: 200px;
+    border: 2px solid #333;
+    border-radius: 4px 0 0 4px;
+}
+
+.input-group button {
+    padding: 10px 29px;
+    background-color: #333;
+    color: #fff;
+    border: 2px solid #333;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.input-group button:hover {
+    color: #89fffd;
+}
+
+/* Bottom section: Flexbox for copyright, developer, and policies */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    border-top: 1px solid #333; /* 1px solid #ddd; */
+    padding: 10px 200px;
+}
+
+.copyright, .developer {
+    flex: 1;
+    /* text-align: left; */
+    color: #333;
+    font-weight: bold;
+}
+
+.developer {
+    text-align: center;
+}
+
+.developer a {
+    text-decoration: none;
+    padding-right: 108px;
+    color: #333;
+    /* font-weight: bold; */
+}
+
+.policies {
+    flex: 1;
+    display: flex;
+    /* justify-content: flex-end; */
+}
+
+/* Policies popup overlay styles */
+.policies-popup-overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Policies popup content styles */
+.policies-popup-content {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #ef32d990, #89fffd) 1;
+    background-color: #fff;
+    padding: 10px 30px;
+    width: 400px;
+    position: relative; 
+    text-align: center;
+}
+
+.policies-popup-content:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border: 10px solid;
+    border-image: linear-gradient(135deg, #333,  #ef32d990, #333) 1;
+}
+
+/* Policies close button */
+.policies-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: red;
+    border: none;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+/* Policies marquee container */
+.policies-marquee-container {
+    overflow: hidden; /* Hide content outside the container */
+    white-space: nowrap; /* Prevent text from wrapping */
+    width: 100%; /* Full width */
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+/* Policies marquee text */
+.policies-marquee-text {
+    display: inline-block;
+    animation: scroll-left 30s linear infinite; /* Smooth scrolling animation */
+    color: #333;
+    font-weight: bold;
+}
+
+/* Keyframes for policies marquee effect */
+@keyframes scroll-left {
+    from {
+        transform: translateX(50%); /* Start from the right */
+    }
+    to {
+        transform: translateX(-100%); /* Move to the left */
+    }
+}
+
+.policies a {
+    margin-left: 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.developer a:hover, .policies a:hover {
+    text-decoration: underline #89fffd 4px solid;
+}
+
+
+/* Loader styling */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    /* background: linear-gradient(135deg, #89fffd, #ef32d990); */
+    background-attachment: fixed;
+}
+
+.loading-screen i {
+    font-size: 100px;
+    /* font-family: "Atomic Age", system-ui; */
+    color: #89fffd;
+    animation: blink 1s infinite;
+}
+
+/* Keyframes animation for loader */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
