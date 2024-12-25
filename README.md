@@ -1,4 +1,4 @@
-# Verse
+## Verse
 
 Verse is a platform where users can freely express their thoughts and ideas by suggesting their own verse on various topics. 
 No account creation is required to submit a verse—users can instantly share their creativity without barriers.
@@ -31,3 +31,5 @@ This project is open source and available under the MIT License.
 
 ## Contact
 For any inquiries, collaboration or feedback, you can reach me via email at [franklyn.akam@gmail.com].
+
+## Thanks and best regards.
