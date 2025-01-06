@@ -31,21 +31,39 @@
     <!-- Header section -->
     <header id="header">
         <div class="verse-logo">
-            <!-- <a href="about.html"><img src="images/VERSE transparent logo white.png" alt="Verse Logo"></a>  -->
-            <a href="about.html"><span class="verse-logo-top-text">VERSE<i class="fa-solid fa-quote-right"></i></span></a>
+            <a href="about.html"><span class="verse-logo-top-text">VERSE<i class="fa-solid fa-quote-right"></i></span></a> 
         </div>
-    
-        <div class="nav">
+
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-nav">
             <nav>
                 <ul>
-                    <li><a href="goto.html">Go To <i class="fa-solid fa-shuttle-space"></i></a></li>
-                    <li><a href="read-verse.html">Read Verse! </i> <i class="fa-solid fa-quote-right"></i></a></li>
+                    <li><a href="goto.html">Go To <i class="fa-solid fa-shuttle-space"></i> </a></li>
+                    <li><a href="verse.html">Start To Verse! </i> <i class="fa-solid fa-quote-right"></i> </a></li>
                     <li><a href="topics.html">Topics <i class="fa-solid fa-layer-group"></i> </a></li>
                     <li><a href="tags.html">Tags <i class="fa-solid fa-tags"></i> </a></li>
-                    <li><a href="subscribe.html">Subscribe</a></li>
+                    <li><a href="subscribe.html">Subscribe <i class="fa-solid fa-inbox"></i> </a></li>
                 </ul>
             </nav>
         </div>
+
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li><a href="goto.html">Go To <i class="fa-solid fa-shuttle-space"></i> </a></li>
+                    <li><a href="verse.html">Start To Verse! </i> <i class="fa-solid fa-quote-right"></i> </a></li>
+                    <li><a href="topics.html">Topics <i class="fa-solid fa-layer-group"></i> </a></li>
+                    <li><a href="tags.html">Tags <i class="fa-solid fa-tags"></i> </a></li>
+                    <li><a href="subscribe.html">Subscribe <i class="fa-solid fa-inbox"></i> </a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
     </header>
 
 
@@ -58,7 +76,7 @@
                 <button class="policies-close-btn" onclick="closePopup()">×</button>
                 <div class="policies-marquee-container">
                     <div class="policies-marquee-text">
-                        Your privacy matters to us, Verser! We only use what’s necessary to make Verse awesome for you. No extra fluff, no funny business—just heartfelt vibes. Close this window and happy Versing!
+                        Your privacy matters to us, verser! We only use what’s necessary to make Verse awesome for you. No extra fluff, no funny business—just heartfelt vibes. Close this window and happy versing!
                     </div>
                 </div>
             </div>
@@ -66,13 +84,13 @@
 
         <div class="main-container">
             <h1>Privacy Policy</h1>
-            <p><strong>Last modified:</strong> October 10, 2024</p>
+            <p><strong>Last modified:</strong> January 2, 2025</p>
     
             <h2>Information Verse Collect</h2>
             <p>Verse may collect the following information:</p>
             <ul>
                 <li><strong>Email Address:</strong> Collected when you subscribe to receive updates.</li>
-                <li><strong>Content You Post:</strong> This includes any verses, comments, or messages you share on the platform.</li>
+                <li><strong>Content You Post:</strong> This includes any verses, or reactions you share on the platform.</li>
                 <li><strong>Verification Information:</strong> Information required to verify that you are a human user.</li>
             </ul>
     
@@ -97,8 +115,7 @@
     
             <h2>Data Security</h2>
             <p>
-                Verse take reasonable measures to protect your information from unauthorized access or misuse. 
-                However, no online service can be 100% secure, and we cannot guarantee the security of your data.
+                Verse prioritizes the security of your information and implements robust measures to safeguard it against unauthorized access or misuse. While we continuously strive to enhance our security, no system is entirely immune to risks. We encourage users to practice safe online habits to further protect their data.
             </p>
     
             <h2>Your Choices</h2>
@@ -109,7 +126,7 @@
     
             <h2>Changes to the Policy</h2>
             <p>
-                Verse may update this Privacy Policy from time to time. Any significant changes will be posted on our platform, and users will be notified.
+                Verse may modify this Privacy Policy from time to time. Any significant changes will be posted on our social media platforms.
             </p>
     
             <h2>Contact Us</h2>
@@ -155,7 +172,7 @@
                         </div>
                         
                         <div class="input-group">
-                            <input type="email" name="email" placeholder="Enter your email address" required>
+                            <input type="email" name="email" autocomplete="email" placeholder="Enter your email address" required>
                             <button type="submit">Subscribe</button>
                         </div>
                     </form>
@@ -167,12 +184,7 @@
                 
                 <!-- Copyright -->
                 <div class="copyright">
-                    &copy; 2026 Zed Technologies
-                </div>
-                
-                <!-- Development attribution -->
-                <div class="developer">
-                    <a href="https://www.linkedin.com/in/franklynakam" target="_blank">Developed with  <i class="fa-solid fa-heart" style="color: #89fffd;"></i></a>
+                    &copy; 2026 Kidiware Technologies
                 </div>
                 
                 <!-- Policies links -->
@@ -196,7 +208,7 @@
             setTimeout(() => {
                 loader.style.display = "none";
                 mainContent.style.display = "block";
-                }, 5000); // 5 secs delay
+                }, 2000); // 2 secs loading
             });
     
             // Show the loader on link clicks
@@ -210,8 +222,11 @@
     </script>
 
 
-    <!-- External JS functionality -->
+    <!-- External JS functionalities -->
     <script src="privacy-policy.js"></script>
+
+    <script src="hamburger.js" defer></script>
+
 
 </body>
 </html>

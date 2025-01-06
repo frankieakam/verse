@@ -58,7 +58,7 @@ function saveVerseToLocalStorage() {
 
     // Check if all fields are filled
     if (!username || !verseText || !userPhoto) {
-        alert('Cmon, Verser! Please fill in all the fields before posting your verse!');
+        alert('Cmon, verser! Please fill in all the fields before posting your verse!');
         return;
     }
 
@@ -102,7 +102,7 @@ function saveVerseToLocalStorage() {
         document.getElementById('photo-preview').style.backgroundImage = ''; // Clear photo preview
 
         // Show success message
-        alert('Yoh, Verser! Your verse is now live on Verse!');
+        alert('Yoh, verser! Your verse is now live on Verse!');
     } catch (error) {
         // Log the error to help debug
         console.error('Error saving to localStorage:', error);
