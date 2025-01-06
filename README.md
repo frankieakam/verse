@@ -24,10 +24,7 @@ No account creation is required to submit a verse—users can instantly share th
 - GitHub: Hosting the project and enabling collaboration.
 
 ## Contribution
-Feel free to contribute to the development of Verse! You can submit issues, suggest features, or create a pull request to improve the project.
-
-## License
-This project is open source and available under the MIT License.
+Feel free to contribute to Verse! You can submit issues, suggest features, or create a pull request to improve the project.
 
 ## Contact
 For any inquiries, collaboration or feedback, you can reach me via email at [franklyn.akam@gmail.com].
