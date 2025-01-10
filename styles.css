@@ -310,8 +310,7 @@ a:hover .verse-logo-top-text i {
 
 /* Create the 'X' effect when the hamburger menu is open */
 .hamburger-menu.open i::before {
-    content: '\2715';
-    /* Unicode for the 'X' character */
+    content: '\2715'; /* Unicode for the 'X' character */
     font-size: 25px;
     color: #fff;
 }

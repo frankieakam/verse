@@ -84,7 +84,7 @@ function displayVerses() {
 
         // Not Inspiring emoji
         const notInspiringButton = document.createElement('button');
-        notInspiringButton.innerHTML = '💡❌';
+        notInspiringButton.innerHTML = '❌';
         notInspiringButton.title = 'Not Inspiring';
         notInspiringButton.classList.add('emoji-button');
 
