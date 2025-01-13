@@ -270,8 +270,8 @@ a:hover .verse-logo-top-text i {
         cursor: pointer;
         font-size: 24px;
         color: #89fffd;
-        transition: transform 0.3s ease, color 0.3s ease;
-        padding-right: 40px;
+        transition: transform 0s ease, color 0s ease;
+        padding: 0 40px;
     }
 }
 
@@ -282,8 +282,8 @@ a:hover .verse-logo-top-text i {
         cursor: pointer;
         font-size: 24px;
         color: #89fffd;
-        transition: transform 0.3s ease, color 0.3s ease;
-        padding-right: 40px;
+        transition: transform 0s ease, color 0s ease;
+        padding: 0 40px;
     }
 }
 
@@ -303,15 +303,14 @@ a:hover .verse-logo-top-text i {
 
 .hamburger-menu.open {
     transform: rotate(360deg);
-    transition: all 0.3s ease-in-out;
-    margin-right: 0;
-    /* color: #F00; */
+    transition: all 0s ease-in-out;
+    padding: 0 40px;
 }
 
-/* Create the 'X' effect when the hamburger menu is open */
+/* Create the unicode for bars-staggered icon when the hamburger menu is open */
 .hamburger-menu.open i::before {
-    content: '\2715'; /* Unicode for the 'X' character */
-    font-size: 25px;
+    content: '\f550'; /* Unicode for the fa-bars-staggered icon character */
+    font-size: 24px;
     color: #fff;
 }
 
@@ -379,7 +378,7 @@ a:hover .verse-logo-top-text i {
         top: 0;
         left: 0;
         width: 100%;
-        height: auto;
+        height: 100vh;
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         border: 5px solid;
         border-image: linear-gradient(135deg, #ef32d990, #89fffd) 1 0;
@@ -388,7 +387,7 @@ a:hover .verse-logo-top-text i {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 55px 0;
+        margin: 48px 0;
     }
 }
   
@@ -400,7 +399,7 @@ a:hover .verse-logo-top-text i {
         top: 0;
         left: 0;
         width: 100%;
-        height: auto;
+        height: 100vh;
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
         border: 5px solid;
         border-image: linear-gradient(135deg, #333, #ef32d990, #333) 1 0;
@@ -409,7 +408,8 @@ a:hover .verse-logo-top-text i {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 55px 0;
+        margin: 48px 0;
+       
     }
 }
 
@@ -452,8 +452,8 @@ a:hover .verse-logo-top-text i {
         list-style: none;
         padding: 0;
         margin: 0 40px;
-        display: flex;
-        font-weight: bold;
+        display: inline-block;
+        font-weight: bold;;
     }
 }
 
@@ -536,12 +536,12 @@ a:hover .verse-logo-top-text i {
 @media (max-width: 600px) {
     .mobile-nav ul li a {
         text-decoration: none;
-        font-size: 5px;
+        font-size: 25px;
         color: #fff;
         padding: 4px;
         display: block;
         width: 100%;
-        margin: 8px 0;
+        margin: 16px;
         transition: color 0.3s;
     }
 }
@@ -550,13 +550,14 @@ a:hover .verse-logo-top-text i {
 @media (max-width: 800px) {
     .mobile-nav ul li a {
         text-decoration: none;
-        font-size: 6px;
+        font-size: 26px;
         color: #fff;
-        padding: 5px;
+        padding: 40px 0;
         display: block;
         width: 100%;
-        margin: 8px 0;
+        margin: 16px;
         transition: color 0.3s;
+        text-align: center;
     }
 }
 
@@ -3459,7 +3460,7 @@ a:hover .verse-logo-top-text i {
 @media (max-width: 600px) {
     .subscription-form {
         width: 100%;
-        max-width: 200px;
+        max-width: 150px;
         margin: 20px;
         padding: 10px;
         background-color: #fff;
@@ -3473,8 +3474,8 @@ a:hover .verse-logo-top-text i {
 @media (max-width: 800px) {
     .subscription-form {
         width: 100%;
-        max-width: 200px;
-        margin: 20px;
+        max-width: 150px;
+        margin: 15px;
         padding: 10px;
         background-color: #fff;
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
@@ -5202,7 +5203,7 @@ strong {
 @media (max-width: 600px) {
     .contact-form {
         width: 100%;
-        max-width: 200px;
+        max-width: 150px;
         margin-top: 30px;
         padding: 10px;
         background-color: #fff;
@@ -5216,7 +5217,7 @@ strong {
 @media (max-width: 800px) {
     .contact-form {
         width: 100%;
-        max-width: 200px;
+        max-width: 150px;
         margin-top: 30px;
         padding: 10px;
         background-color: #fff;
