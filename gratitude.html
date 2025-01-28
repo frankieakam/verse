@@ -86,94 +86,65 @@
 
         <!-- Topic cards -->
         <div class="topic-card">
-            <i class="fa-solid fa-quote-left"></i> <i class="fa-solid fa-quote-right"></i>
-            <h2>Motivational Quotes</h2>
-            <p>Personal growth.</p>
-            <a href="motivation.html">Explore</a>
-        </div>
-        
-        <div class="topic-card">
-            <i class="fa-solid fa-heart"></i>
-            <h2>Romantic Notes</h2>
-            <p>Love & romance.</p>
-            <a href="notes.html">Explore</a>
-        </div>
-
-        <div class="topic-card">
-            <i class="fa-regular fa-lightbulb"></i>
-            <h2>Wisdom</h2>
-            <p>Guide and inspire.</p>
-            <a href="wisdom.html">Explore</a>
-        </div>
-
-        <div class="topic-card">
-            <i class="fa-solid fa-heart-pulse"></i>
-            <h2>Health & Wellness</h2>
-            <p>Well-being & self-care.</p>
-            <a href="health.html">Explore</a>
-        </div>
-
-        <div class="topic-card">
-            <i class="fa-solid fa-praying-hands"></i>
-            <h2>Faith & Spirituality</h2>
-            <p>Uplifting spiritual thoughts.</p>
-            <a href="faith.html">Explore</a>
-        </div>
-
-        <div class="topic-card">
-            <i class="fa-solid fa-handshake-simple"></i>
-            <h2>Congratulatory</h2>
-            <p>Achievements & life’s big wins.</p>
-            <a href="congrats.html">Explore</a>
-        </div>
-
-        <div class="topic-card">
-            <i class="fa-solid fa-gift"></i>
-            <h2>Special Occasion</h2>
-            <p>Birthdays & special milestones.</p>
-            <a href="special.html">Explore</a>
+            <i class="fa-solid fa-hands-helping"></i>
+            <!-- <h2>Gratitude</h2> -->
+            <p>Friendship & appreciation.</p>
+            <footer>- Author</footer>
+            <!-- <a href="gratitude.html">Explore</a> -->
         </div>
 
         <div class="topic-card">
             <i class="fa-solid fa-hands-helping"></i>
-            <h2>Gratitude</h2>
             <p>Friendship & appreciation.</p>
-            <a href="gratitude.html">Explore</a>
+            <footer>- Author</footer>
         </div>
-        
+
+        <div class="topic-card">
+            <i class="fa-solid fa-hands-helping"></i>
+            <p>Friendship & appreciation.</p>
+            <footer>- Author</footer>
+        </div>
+
+        <div class="topic-card">
+            <i class="fa-solid fa-hands-helping"></i>
+            <p>Friendship & appreciation.</p>
+            <footer>- Author </footer>
+        </div>
+
     </main>
 
 
-    <!-- Internal JS functionality -->
-    <script>
-        // Show the loader, then display the page content
-        window.addEventListener("load", () => {
-            const loader = document.getElementById("loader");
-            const mainContent = document.getElementById("main");
+ <!-- Internal JS functionality -->
+ <script>
+    // Show the loader, then display the page content
+    window.addEventListener("load", () => {
+        const loader = document.getElementById("loader");
+        const mainContent = document.getElementById("main");
 
-            // Simulate loading time
-            setTimeout(() => {
-                loader.style.display = "none";
-                mainContent.style.display = "block";
-            }, 2000); // 2 secs loading
-        });
+        // Simulate loading time
+        setTimeout(() => {
+            loader.style.display = "none";
+            mainContent.style.display = "block";
+        }, 2000); // 2 secs loading
+    });
 
-        // Show the loader on link clicks
-        function showLoader() {
-            const loader = document.getElementById("loader");
-            const mainContent = document.getElementById("main");
+    // Show the loader on link clicks
+    function showLoader() {
+        const loader = document.getElementById("loader");
+        const mainContent = document.getElementById("main");
 
-            loader.style.display = "flex";
-            mainContent.style.display = "none";
-        };
-    </script>
+        loader.style.display = "flex";
+        mainContent.style.display = "none";
+    };
+</script>
 
 
-    <!-- External JS functionalities -->
-    <script src="topics.js"></script>
+<!-- External JS functionalities -->
+<script src="topics.js"></script>
 
-    <script src="hamburger.js" defer></script>
+<script src="hamburger.js" defer></script>
 
 
 </body>
-</html>
+</html>   
+        
