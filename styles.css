@@ -1811,6 +1811,11 @@ a:hover .verse-logo-top-text i {
 /* Topics styling */
 
 /* Topics Container */
+#topics-container {
+    margin-top: auto;
+    padding-top: auto;
+}
+
 .topics-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
