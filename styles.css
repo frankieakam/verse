@@ -1812,8 +1812,21 @@ a:hover .verse-logo-top-text i {
 
 /* Topics Container */
 #topics-container {
-    margin-top: auto;
-    padding-top: auto;
+    margin-top: 90px;
+}
+
+/* large smartphones - 1024px */
+@media (min-width: 1024px) {
+    #topics-container {
+        margin-bottom: 20px;
+    }
+}
+
+/* tablets - 1280px */
+@media (min-width: 1280px) {
+    #topics-container {
+        margin-bottom: 20px;
+    }
 }
 
 .topics-container {
