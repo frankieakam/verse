@@ -2964,6 +2964,8 @@ a:hover .verse-logo-top-text i {
     height: auto;
     display: block;
     border-bottom: 5px solid #333;
+    border-radius: 100%;
+    padding: 20px;
 }
 
 /* small smartphones - 600px */
